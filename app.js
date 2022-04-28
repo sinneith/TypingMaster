@@ -71,3 +71,10 @@ randomAdvice();
 startBtn.addEventListener("click", start);
 typeForm.addEventListener("submit", submit);
 againBtn.addEventListener("click", start);
+document.addEventListener("keypress", (e) => {
+  if (e.keyCode === 13 && startPage.style.display !== "none") {
+    startBtn.click();
+  } else if (e.keyCode === 13 && againBtn.style.opacity === "1") {
+    startBtn.click();
+  }
+});
