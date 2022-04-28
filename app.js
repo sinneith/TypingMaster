@@ -35,11 +35,15 @@ function setTimer() {
   let handleTimer = setInterval(() => {
     let timeInNumber = Number(lastTime.innerText);
     if (timeInNumber === 0) {
+      lastTime.style.color = "black";
       clearInterval(handleTimer);
       showResult();
     } else {
       timeInNumber -= 1;
       lastTime.innerText = timeInNumber;
+      if (timeInNumber <= 3) {
+        lastTime.style.color = "red";
+      }
     }
   }, 1000);
 }
