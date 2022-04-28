@@ -57,6 +57,7 @@ function showResult() {
   alert(`당신의 점수는 ${score.innerText}점입니다.`);
   score.innerText = 0;
   lastTime.innerText = 20;
+  typeInput.value = "";
   typeInput.disabled = true;
   againBtn.style.opacity = "1";
   randomAdvice();

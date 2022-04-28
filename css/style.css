@@ -12,6 +12,7 @@ body {
 button {
   all: unset;
   cursor: pointer;
+  display: block;
   border: 1px solid #000;
   padding: 1.8rem 3.5rem;
   border-radius: 5rem;
@@ -53,7 +54,6 @@ button:hover {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -40%);
-  /* background-color: green; */
 }
 
 #sentence {
