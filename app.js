@@ -19,6 +19,7 @@ function start() {
   startPage.style.display = "none";
   typePage.style.display = "block";
   typeInput.disabled = false;
+  typeInput.focus();
   setTimer();
 }
 
@@ -71,10 +72,10 @@ randomAdvice();
 startBtn.addEventListener("click", start);
 typeForm.addEventListener("submit", submit);
 againBtn.addEventListener("click", start);
-document.addEventListener("keypress", (e) => {
+document.addEventListener("keyup", (e) => {
   if (e.keyCode === 13 && startPage.style.display !== "none") {
     startBtn.click();
   } else if (e.keyCode === 13 && againBtn.style.opacity === "1") {
-    startBtn.click();
+    againBtn.click();
   }
 });
