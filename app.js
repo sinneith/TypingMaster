@@ -5,7 +5,7 @@ const typeForm = document.getElementById("typing");
 const typeInput = typeForm.querySelector("input");
 const score = document.querySelector("#score > span");
 const lastTime = document.querySelector("#time > span");
-const againBtn = document.querySelector("button");
+const againBtn = document.getElementById("againBtn");
 
 function randomAdvice() {
   fetch("https://api.adviceslip.com/advice")
@@ -15,14 +15,18 @@ function randomAdvice() {
 }
 
 function start() {
+  againBtn.style.opacity = "0";
   startPage.style.display = "none";
   typePage.style.display = "block";
+  typeInput.disabled = false;
   setTimer();
 }
 
 function submit(event) {
   event.preventDefault();
-  lastTime.innerText = 15;
+  if (sentence.innerText === typeInput.value) {
+    lastTime.innerText = 20;
+  }
   addScore();
   randomAdvice();
 }
@@ -52,8 +56,10 @@ function addScore() {
 function showResult() {
   alert(`당신의 점수는 ${score.innerText}점입니다.`);
   score.innerText = 0;
-  lastTime.innerText = 15;
+  lastTime.innerText = 20;
   typeInput.disabled = true;
+  againBtn.style.opacity = "1";
+  randomAdvice();
 }
 
 randomAdvice();
