@@ -8,16 +8,24 @@
     <link rel="stylesheet" href="css/style.css" />
     <script async src="app.js"></script>
   </head>
-  <body style="background-color: rgb(190, 190, 190)">
-    <div id="start">START</div>
-    <div id="wrap" style="display: none">
-      <h2 id="sentence"></h2>
-      <form id="typing"><input type="text" autofocus /></form>
-      <section id="time">
-        <div id="time">남은시간: <span>15</span> 초</div>
-        <div id="score">획득점수: <span>0</span> 점</div>
-      </section>
-      <button>다시 시작</button>
+  <body>
+    <div id="start">
+      <div class="start_wrap">
+        <h1>Typing Master</h1>
+        <button id="startBtn">START</button>
+      </div>
+    </div>
+    <div id="form" style="display: none">
+      <div id="form_wrap">
+        <h2 id="sentence"></h2>
+        <form id="typing"><input type="text" placeholder="type here" /></form>
+        <section id="status">
+          <div id="time"><span>15</span> 초</div>
+          <div id="score"><span>0</span> 점</div>
+        </section>
+        <button id="againBtn" style="opacity: 0">다시 시작</button>
+        <button id="againBtn" style="display: none">다시 시작</button>
+      </div>
     </div>
   </body>
 </html>
