@@ -1,4 +1,4 @@
-Typing Master
+# Typing Master
 
 - 주어진 20초의 시간동안 랜덤한 영어문장을 타이핑하는 영타연습 게임입니다.
 - 영어문장은 Advice Slip API를 이용해 불러왔습니다.
